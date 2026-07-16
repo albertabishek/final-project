@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seobility - FEMINA K</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons for easy UI icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        :root {
+            --sidebar-bg: #153259;
+            --sidebar-active: #0f2441;
+            --bg-color: #F8F9FA;
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-muted: #6C757D;
+            --text-light: #8E98A8;
+            --blue-accent: #2382F7;
+            --green-accent: #4CAF50;
+            --green-score: #48BB78;
+            --border-color: #E2E8F0;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            margin: 0 auto;
+            flex: 1;
+            padding: 2rem 3rem;
+            max-width: 1200px;
+        }
+
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .main-content h2, .main-content .card {
+            animation: fadeSlideUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        /* Stagger animations */
+        .main-content h2:nth-of-type(1) { animation-delay: 0s; }
+        .main-content .card:nth-of-type(1) { animation-delay: 0.1s; }
+        .main-content h2:nth-of-type(2) { animation-delay: 0.2s; }
+        .main-content .card:nth-of-type(2) { animation-delay: 0.3s; }
+        .main-content .card:nth-of-type(3) { animation-delay: 0.4s; }
+
+        /* Card Common */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        /* Top Section: Score & Progress */
+        .top-section {
+            display: flex;
+            padding: 2.5rem;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .score-circle-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+        }
+
+        /* CSS Circular Progress */
+        .circular-chart {
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+            max-height: 200px;
+        }
+        
+        .circle-bg {
+            fill: none;
+            stroke: #E2E8F0;
+            stroke-width: 3.8;
+        }
+        
+        .circle {
+            fill: none;
+            stroke-width: 3.8;
+            stroke-linecap: round;
+            stroke: #ECC94B;
+            stroke-dasharray: 76, 100;
+        }
+        
+        .percentage {
+            fill: var(--text-main);
+            font-family: var(--font-main);
+            font-weight: 700;
+            font-size: 0.5em;
+            text-anchor: middle;
+        }
+        
+        .score-label {
+            fill: var(--text-main);
+            font-family: var(--font-main);
+            font-size: 0.18em;
+            font-weight: 600;
+            text-anchor: middle;
+        }
+
+        .embed-btn {
+            margin-top: 1rem;
+            padding: 0.4rem 0.8rem;
+            border: 1px solid var(--border-color);
+            background: white;
+            border-radius: 4px;
+            color: var(--text-main);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Progress Bars Grid */
+        .metrics-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem 4rem;
+        }
+
+        .metric-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .metric-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--sidebar-bg);
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 8px;
+            background-color: #E2E8F0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background-color: var(--blue-accent);
+            border-radius: 4px;
+        }
+
+        /* Bottom Section: HTML Page */
+        .html-page-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--sidebar-bg);
+            font-size: 1.1rem;
+        }
+
+        .header-title i {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+        
+        .header-title .help-icon {
+            font-size: 1rem;
+            color: #A0AEC0;
+            margin-left: 0.2rem;
+        }
+
+        .show-page-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            background: white;
+            border-radius: 4px;
+            color: var(--sidebar-bg);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        /* Page Details Body */
+        .page-details-body {
+            display: flex;
+            padding: 1.5rem;
+            gap: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .thumbnail {
+            width: 320px;
+            height: 200px;
+            background-color: #E2E8F0;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .meta-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .meta-label {
+            color: #6481A7;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .meta-value {
+            color: var(--sidebar-bg);
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .meta-url {
+            color: var(--blue-accent);
+            text-decoration: none;
+        }
+
+        /* Footer Stats */
+        .stats-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.2rem 1.5rem;
+            background-color: #F8FAFC;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .stats-col {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .stat-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .stat-row i {
+            color: #718096;
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .stat-label {
+            color: #6481A7;
+            font-weight: 500;
+            width: 90px;
+        }
+
+        .stat-value {
+            font-weight: 600;
+            color: var(--sidebar-bg);
+        }
+
+        .badge {
+            background-color: var(--green-score);
+            color: white;
+            padding: 0.1rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.3rem;
+        }
+        
+        /* Top Nav */
+        header.top-nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 0; margin-bottom: 2rem;
+        }
+        .logo { font-weight: 800; font-size: 1.1rem; color: #0f172a; text-decoration: none; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.2rem; }
+        .logo .star { color: #0ea5e9; font-size: 1.2rem; }
+        .top-nav nav { display: flex; gap: 3rem; align-items: center; }
+        .top-nav nav a { text-decoration: none; color: #374151; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; padding-bottom: 0.3rem; transition: color 0.2s; }
+        .top-nav nav a:hover { color: #0ea5e9; }
+        .top-nav nav a.active { color: #0f172a; border-bottom: 2px solid #0ea5e9; }
+        
+        /* Floating Help Button */
+        .floating-help {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--sidebar-bg);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        
+        .floating-help i {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        
+        <!-- Navigation Header -->
+        <header class="top-nav">
+            <a href="index.html" class="logo">ALBERT ABISHEK .I </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="Article.html">Article</a>
+                <a href="seobility.html" class="active">Seobility</a>
+            </nav>
+        </header>
+        <h2 style="color: var(--sidebar-bg); margin-top: 1rem; margin-bottom: 1.5rem;">Before Analysis of SEO for the Website</h2>
+        
+        <!-- Top Section -->
+        <div class="card top-section">
+            <div class="score-circle-container">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                    <path class="circle-bg"
+                        d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <path class="circle"
+                        stroke-dasharray="74, 100"
+                        d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <text x="18" y="16" class="percentage">74%</text>
+                    <text x="18" y="22" class="score-label">On-page score</text>
+                </svg>
+                <button class="embed-btn">Embed widget</button>
+            </div>
+
+            <div class="metrics-grid">
+                <!-- Meta Data -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span>Meta data</span>
+                        <span>79 %</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 79%;"></div>
+                    </div>
+                </div>
+                <!-- Page Quality -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span>Page quality</span>
+                        <span>79 %</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 79%;"></div>
+                    </div>
+                </div>
+                <!-- Page Structure -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span>Page structure</span>
+                        <span>81 %</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 81%;"></div>
+                    </div>
+                </div>
+                <!-- Links -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span>Links</span>
+                        <span>66 %</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 66%;"></div>
+                    </div>
+                </div>
+                <!-- Server -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span>Server</span>
+                        <span>100 %</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <!-- External Factors -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span>External factors</span>
+                        <span>3 %</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 3%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HTML Page Details Section -->
+        <div class="card html-page-section">
+            <div class="section-header">
+                <div class="header-title">
+                    <i class="ph ph-shield-check"></i>
+                    HTML page
+                    <i class="ph ph-question help-icon"></i>
+                </div>
+                <button class="show-page-btn">Show page</button>
+            </div>
+            
+            <div class="page-details-body">
+                <div class="thumbnail">
+                    <!-- Using Report Before optimise.png from the user's images -->
+                    <img src="Report Before optimise.png" alt="Page Thumbnail">
+                </div>
+                <div class="meta-info">
+                    <div class="meta-item">
+                        <span class="meta-label">Meta title</span>
+                        <span class="meta-value">SEO vs GEO: Why Search Ranking Is Changing in 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Meta description</span>
+                        <span class="meta-value"></span>
+                    </div>
+                    <div class="meta-item" style="flex-direction: row; gap: 1rem; align-items: center;">
+                        <span class="meta-label">URL</span>
+                        <a href="#" class="meta-value meta-url">https://albertabishek.blogspot.com/2026/06/seo-vs-geo-why-traditional-search.html <i class="ph ph-globe" style="color:#A0AEC0;"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-footer">
+                <div class="stats-col">
+                    <div class="stat-row">
+                        <i class="ph ph-file-code"></i>
+                        <span class="stat-label">Status code</span>
+                        <span class="badge">200</span>
+                    </div>
+                    <div class="stat-row">
+                        <i class="ph ph-browser"></i>
+                        <span class="stat-label">Page status</span>
+                        <div>
+                            <span class="badge">Follow</span>
+                            <span class="badge">Index</span>
+                        </div>
+                    </div>
+                    <div class="stat-row">
+                        <i class="ph ph-globe"></i>
+                        <span class="stat-label">Language</span>
+                        <span class="badge">EN</span>
+                    </div>
+                </div>
+                
+                <div class="stats-col">
+                    <div class="stat-row">
+                        <i class="ph ph-timer"></i>
+                        <span class="stat-label">Response time</span>
+                        <span class="stat-value">0.36 sec</span>
+                    </div>
+                    <div class="stat-row">
+                        <i class="ph ph-hard-drive"></i>
+                        <span class="stat-label">File size</span>
+                        <span class="stat-value">141.10 kB</span>
+                    </div>
+                    <div class="stat-row">
+                        <i class="ph ph-text-aa"></i>
+                        <span class="stat-label">Word count</span>
+                        <span class="stat-value">2,922</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 style="color: var(--sidebar-bg); margin-top: 3rem; margin-bottom: 1.5rem;">After Analysis of SEO for the Website</h2>
+        
+        <!-- After Section Top -->
+        <div class="card top-section">
+            <div class="score-circle-container">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                    <path class="circle-bg"
+                        d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <path class="circle"
+                        style="stroke: var(--green-score);"
+                        stroke-dasharray="90, 100"
+                        d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <text x="18" y="16" class="percentage">90%</text>
+                    <text x="18" y="22" class="score-label">On-page score</text>
+                </svg>
+                <button class="embed-btn">Embed widget</button>
+            </div>
+
+            <div class="metrics-grid">
+                <!-- Meta Data -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span>Meta data</span>
+                        <span>98 %</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 98%;"></div>
+                    </div>
+                </div>
+                <!-- Page Quality -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span>Page quality</span>
+                        <span>100 %</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <!-- Page Structure -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span>Page structure</span>
+                        <span>100 %</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <!-- Links -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span>Links</span>
+                        <span>68 %</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 68%;"></div>
+                    </div>
+                </div>
+                <!-- Server -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span>Server</span>
+                        <span>100 %</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <!-- External Factors -->
+                <div class="metric-item">
+                    <div class="metric-header">
+                        <span>External factors</span>
+                        <span>3 %</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 3%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HTML Page Details Section -->
+        <div class="card html-page-section">
+            <div class="section-header">
+                <div class="header-title">
+                    <i class="ph ph-shield-check"></i>
+                    HTML page
+                    <i class="ph ph-question help-icon"></i>
+                </div>
+                <button class="show-page-btn">Show page</button>
+            </div>
+            
+            <div class="page-details-body">
+                <div class="thumbnail">
+                    <!-- Using Report After optimise.png from the user's images -->
+                    <img src="Report After optimise.png" alt="Page Thumbnail">
+                </div>
+                <div class="meta-info">
+                    <div class="meta-item">
+                        <span class="meta-label">Meta title</span>
+                        <span class="meta-value">SEO vs GEO: Why Search Ranking Is Changing in 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Meta description</span>
+                        <span class="meta-value">Google rankings no longer drive leads. Learn how GEO gets your business cited by ChatGPT, Gemini, Claude and Perplexity — 7 proven strategies with 202</span>
+                    </div>
+                    <div class="meta-item" style="flex-direction: row; gap: 1rem; align-items: center;">
+                        <span class="meta-label">URL</span>
+                        <a href="#" class="meta-value meta-url">https://albertabishek.blogspot.com/2026/06/seo-vs-geo-why-traditional-search.html <i class="ph ph-globe" style="color:#A0AEC0;"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-footer">
+                <div class="stats-col">
+                    <div class="stat-row">
+                        <i class="ph ph-file-code"></i>
+                        <span class="stat-label">Status code</span>
+                        <span class="badge">200</span>
+                    </div>
+                    <div class="stat-row">
+                        <i class="ph ph-browser"></i>
+                        <span class="stat-label">Page status</span>
+                        <div>
+                            <span class="badge">Follow</span>
+                            <span class="badge">Index</span>
+                        </div>
+                    </div>
+                    <div class="stat-row">
+                        <i class="ph ph-globe"></i>
+                        <span class="stat-label">Language</span>
+                        <span class="badge">EN</span>
+                    </div>
+                </div>
+                
+                <div class="stats-col">
+                    <div class="stat-row">
+                        <i class="ph ph-timer"></i>
+                        <span class="stat-label">Response time</span>
+                        <span class="stat-value">0.35 sec</span>
+                    </div>
+                    <div class="stat-row">
+                        <i class="ph ph-hard-drive"></i>
+                        <span class="stat-label">File size</span>
+                        <span class="stat-value">155.30 kB</span>
+                    </div>
+                    <div class="stat-row">
+                        <i class="ph ph-text-aa"></i>
+                        <span class="stat-label">Word count</span>
+                        <span class="stat-value">3,622</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="floating-help">
+        <i class="ph ph-globe"></i> Help
+    </div>
+
+</body>
+</html>

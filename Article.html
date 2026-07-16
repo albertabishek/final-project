@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How AI Is Replacing Google Search in 2026</title>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        /* Global Navigation Styles */
+        body { margin: 0; padding: 0; background-color: #fff; font-family: 'Inter', sans-serif; }
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 4rem; max-width: 1400px; margin: 0 auto;
+        }
+        .logo { font-weight: 800; font-size: 1.1rem; color: #0f172a; text-decoration: none; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.2rem; }
+        .logo .star { color: #0ea5e9; font-size: 1.2rem; }
+        nav { display: flex; gap: 3rem; align-items: center; }
+        nav a { text-decoration: none; color: #374151; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; padding-bottom: 0.3rem; transition: color 0.2s; }
+        nav a:hover { color: #0ea5e9; }
+        nav a.active { color: #0f172a; border-bottom: 2px solid #0ea5e9; }
+        @media (max-width: 768px) { header { padding: 1.5rem 2rem; } }
+    </style>
+<!--
+╔══════════════════════════════════════════════════════════════╗
+║  SEO vs GEO — ANIMATED BLOGGER POST  (Final Build)         ║
+╚══════════════════════════════════════════════════════════════╝
+-->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+.gp { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 820px; margin: 0 auto; color: #1e293b; line-height: 1.78; font-size: 16.5px; background: #fff; }
+.gp * { box-sizing: border-box; }
+.gp-hero { background: linear-gradient(140deg, #0f172a 0%, #1a3050 55%, #0c4a6e 100%); padding: 60px 44px 56px; text-align: center; border-radius: 18px; margin-bottom: 56px; position: relative; overflow: hidden; }
+.gp-hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 65% 30%, rgba(14,165,233,0.14) 0%, transparent 68%); pointer-events: none; }
+.gp-hero-tag { display: inline-block; background: rgba(14,165,233,0.18); color: #7dd3fc; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 6px 18px; border-radius: 20px; border: 1px solid rgba(14,165,233,0.30); margin-bottom: 24px; }
+.gp-hero h1 { font-size: 37px; font-weight: 800; color: #fff; line-height: 1.18; margin: 0 0 16px; letter-spacing: -0.6px; }
+.gp-hero .hero-sub { font-size: 15.5px; color: rgba(255,255,255,0.60); max-width: 580px; margin: 0 auto; line-height: 1.7; }
+.gp-sec { margin-bottom: 58px; }
+.gp-sec h2 { font-size: 25px; font-weight: 800; color: #0f172a; line-height: 1.28; margin: 0 0 18px; padding-left: 16px; border-left: 4px solid #0ea5e9; }
+.gp-sec h3 { font-size: 19px; font-weight: 700; color: #1e293b; margin: 34px 0 12px; }
+.gp-sec p { font-size: 16.5px; color: #374151; margin: 0 0 16px; line-height: 1.8; }
+.gp-sec ul, .gp-sec ol { padding-left: 22px; margin: 10px 0 16px; }
+.gp-sec ul li, .gp-sec ol li { font-size: 16px; color: #374151; margin-bottom: 9px; line-height: 1.72; }
+.gp-sec strong { color: #0f172a; }
+.src-link { font-size: 10.5px; color: #0ea5e9; text-decoration: none; vertical-align: super; margin-left: 1px; font-weight: 700; transition: color 0.2s ease; }
+.src-link:hover { text-decoration: underline; color: #0284c7; }
+.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 30px 0; }
+.stat-card { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 14px; padding: 22px 16px; text-align: center; transition: box-shadow 0.3s ease; }
+.stat-card:hover { box-shadow: 0 8px 28px rgba(3,105,161,0.20); }
+.stat-num { font-size: 30px; font-weight: 800; color: #0369a1; line-height: 1.1; margin-bottom: 7px; }
+.stat-desc { font-size: 13px; color: #374151; line-height: 1.52; margin-bottom: 6px; }
+.stat-src { font-size: 11px; color: #94a3b8; font-style: italic; }
+.c-quote { background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-left: 4px solid #0ea5e9; border-radius: 0 12px 12px 0; padding: 20px 26px; margin: 26px 0; font-size: 17px; color: #0c4a6e; font-style: italic; line-height: 1.72; }
+.c-insight { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 12px; padding: 18px 22px; margin: 26px 0; }
+.c-insight .ci-lbl { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.8px; color: #d97706; margin-bottom: 7px; }
+.c-insight p { font-size: 15.5px; color: #78350f; margin: 0; font-style: normal; line-height: 1.7; }
+.img-ph { background: linear-gradient(135deg, #f1f5f9, #e8eef6); border: 2px dashed #94a3b8; border-radius: 14px; padding: 16px; text-align: center; margin: 32px 0; }
+.cmp-two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 28px 0; }
+.cmp-card { border-radius: 14px; padding: 26px; border: 2px solid; transition: box-shadow 0.3s ease; }
+.cmp-card:hover { box-shadow: 0 6px 22px rgba(0,0,0,0.10); }
+.cmp-card.seo { background: #fefce8; border-color: #fde047; }
+.cmp-card.geo { background: #f0fdf4; border-color: #4ade80; }
+.cmp-card .cmp-hd { font-size: 13.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; padding-bottom: 12px; border-bottom: 2px solid; margin-bottom: 16px; }
+.cmp-card.seo .cmp-hd { color: #a16207; border-color: #fde047; }
+.cmp-card.geo .cmp-hd { color: #15803d; border-color: #4ade80; }
+.cmp-card ul { list-style: none; padding: 0; margin: 0; }
+.cmp-card ul li { font-size: 14.5px; color: #374151; padding: 6px 0 6px 20px; position: relative; line-height: 1.62; border-bottom: 1px solid rgba(0,0,0,0.05); }
+.cmp-card ul li:last-child { border-bottom: none; }
+.cmp-card ul li::before { content: '\2192'; position: absolute; left: 0; color: #94a3b8; }
+.qbox { background: #0f172a; border-radius: 14px; padding: 28px 30px; margin: 26px 0; border: 1px solid rgba(255,255,255,0.06); }
+.qbox-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #38bdf8; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.09); display: flex; align-items: center; gap: 8px; }
+.qbox-row { display: flex; align-items: flex-start; gap: 12px; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.qbox-row:last-child { border-bottom: none; }
+.q-cat { font-size: 11px; font-weight: 700; color: #7dd3fc; background: rgba(14,165,233,0.15); padding: 3px 10px; border-radius: 6px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
+.q-val { font-size: 13.5px; color: rgba(255,255,255,0.75); font-family: 'Courier New', 'Consolas', monospace; line-height: 1.55; }
+.pf-list { display: grid; gap: 14px; margin: 26px 0; }
+.pf-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px 22px; display: grid; grid-template-columns: 190px 1fr 1fr; gap: 16px; align-items: start; border-left: 5px solid; transition: box-shadow 0.3s ease; }
+.pf-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.10); }
+.pf-card.pf-g  { border-left-color: #4285f4; }
+.pf-card.pf-c  { border-left-color: #10a37f; }
+.pf-card.pf-ge { border-left-color: #8b5cf6; }
+.pf-card.pf-cl { border-left-color: #e27340; }
+.pf-card.pf-px { border-left-color: #20b2aa; }
+.pf-nm  { font-size: 15px; font-weight: 700; color: #0f172a; }
+.pf-src { font-size: 12.5px; color: #64748b; margin-top: 4px; line-height: 1.5; }
+.pf-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #94a3b8; margin-bottom: 4px; }
+.pf-txt { font-size: 13.5px; color: #374151; line-height: 1.55; }
+.sig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(228px, 1fr)); gap: 16px; margin: 26px 0; }
+.sig-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 22px; border-top: 4px solid; transition: box-shadow 0.3s ease; }
+.sig-card:hover { box-shadow: 0 6px 22px rgba(0,0,0,0.12); }
+.sig-card:nth-child(1){ border-top-color:#3b82f6 }
+.sig-card:nth-child(2){ border-top-color:#10b981 }
+.sig-card:nth-child(3){ border-top-color:#f59e0b }
+.sig-card:nth-child(4){ border-top-color:#8b5cf6 }
+.sig-card:nth-child(5){ border-top-color:#ef4444 }
+.sig-card:nth-child(6){ border-top-color:#14b8a6 }
+.sig-card:nth-child(7){ border-top-color:#f97316 }
+.sig-ico  { font-size: 26px; display: block; margin-bottom: 10px; }
+.sig-num  { font-size: 10.5px; font-weight: 700; color: #94a3b8; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+.sig-nm   { font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 8px; }
+.sig-dsc  { font-size: 13.5px; color: #4b5563; line-height: 1.62; }
+.pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 26px 0; }
+.pillar { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 26px; border-top: 5px solid; transition: box-shadow 0.3s ease; }
+.pillar:hover { box-shadow: 0 6px 22px rgba(0,0,0,0.12); }
+.pillar:nth-child(1){ border-top-color:#3b82f6 }
+.pillar:nth-child(2){ border-top-color:#10b981 }
+.pillar:nth-child(3){ border-top-color:#f59e0b }
+.pillar:nth-child(4){ border-top-color:#8b5cf6 }
+.pillar-ico { font-size: 28px; display: block; margin-bottom: 10px; }
+.pillar-nm  { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 8px; }
+.pillar-dsc { font-size: 14px; color: #4b5563; line-height: 1.65; }
+.shifts { list-style: none; padding: 0; margin: 20px 0; }
+.shifts li { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid #f1f5f9; }
+.shifts li:last-child { border-bottom: none; }
+.sh-dot { width: 8px; height: 8px; background: #0ea5e9; border-radius: 50%; margin-top: 9px; flex-shrink: 0; }
+.sh-txt { font-size: 15.5px; color: #374151; line-height: 1.76; }
+.sh-txt strong { color: #0f172a; font-weight: 700; }
+.sc { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 28px 32px; margin-bottom: 20px; position: relative; overflow: hidden; transition: box-shadow 0.3s ease; }
+.sc:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.09); }
+.sc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #0ea5e9, #14b8a6); }
+.sc-num { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: linear-gradient(135deg, #0ea5e9, #14b8a6); color: #fff; font-size: 16px; font-weight: 800; border-radius: 10px; margin-bottom: 14px; }
+.sc h3, .sc .sc-h3 { font-size: 19px; font-weight: 700; color: #0f172a; margin: 0 0 14px; display: block; }
+.sc p  { font-size: 15.5px; color: #4b5563; margin: 0 0 12px; line-height: 1.78; }
+.sc ul { padding-left: 20px; margin: 0 0 12px; }
+.sc ul li { font-size: 15px; color: #4b5563; margin-bottom: 7px; line-height: 1.7; }
+.ba { background: #f8fafc; border-radius: 10px; padding: 4px; margin: 16px 0; }
+.ba-row { padding: 12px 16px; border-radius: 8px; margin-bottom: 4px; font-size: 14.5px; line-height: 1.65; }
+.ba-row:last-child { margin-bottom: 0; }
+.ba-lbl { display: block; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 5px; }
+.ba-bef { background: #fef2f2; color: #7f1d1d; }
+.ba-bef .ba-lbl { color: #ef4444; }
+.ba-aft { background: #f0fdf4; color: #14532d; }
+.ba-aft .ba-lbl { color: #22c55e; }
+.ps-list { display: grid; gap: 10px; margin: 14px 0; }
+.ps-row { display: flex; align-items: flex-start; gap: 12px; background: #f8fafc; border-radius: 8px; padding: 12px 14px; border-left: 3px solid; }
+.ps-row.ps-px { border-left-color: #20b2aa; }
+.ps-row.ps-ge { border-left-color: #8b5cf6; }
+.ps-row.ps-cl { border-left-color: #e27340; }
+.ps-row.ps-ch { border-left-color: #10a37f; }
+.ps-nm  { font-size: 12.5px; font-weight: 700; color: #374151; min-width: 110px; flex-shrink: 0; margin-top: 1px; }
+.ps-tip { font-size: 13.5px; color: #4b5563; line-height: 1.55; }
+.sevo { background: linear-gradient(135deg, #0ea5e9 0%, #14b8a6 100%); border-radius: 18px; padding: 42px 40px; margin: 34px 0; text-align: center; color: #fff; }
+.sevo-eye   { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; opacity: .72; margin-bottom: 10px; }
+.sevo-ttl   { font-size: 30px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 8px; }
+.sevo-tag   { font-size: 15px; opacity: .80; margin-bottom: 30px; max-width: 480px; margin-left: auto; margin-right: auto; }
+.sevo-grid  { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.sevo-item  { background: rgba(255,255,255,0.15); border-radius: 12px; padding: 20px 16px; }
+.sevo-lbl   { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+.sevo-dsc   { font-size: 13px; opacity: .82; line-height: 1.5; }
+.cl-dark { background: linear-gradient(140deg, #0f172a 0%, #1a3050 100%); border-radius: 18px; padding: 40px 44px; margin: 34px 0; }
+.cl-ttl { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.cl-sub { font-size: 14px; color: rgba(255,255,255,0.46); margin-bottom: 28px; }
+.cl-row { display: flex; align-items: flex-start; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.cl-row:last-child { border-bottom: none; }
+.cl-chk { width: 22px; height: 22px; background: #14b8a6; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #fff; font-weight: 900; flex-shrink: 0; margin-top: 1px; }
+.cl-txt { font-size: 15px; color: rgba(255,255,255,0.82); line-height: 1.65; }
+.cl-txt strong { color: #7dd3fc; font-weight: 600; }
+.concl { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 38px 42px; margin-top: 42px; }
+.concl h2 { font-size: 24px; font-weight: 800; color: #0f172a; margin: 0 0 16px; padding: 0; border: none; }
+.concl p  { font-size: 16.5px; color: #374151; margin: 0 0 14px; line-height: 1.8; }
+.concl-ul { list-style: none; padding: 0; margin: 16px 0 20px; }
+.concl-ul li { display: flex; align-items: flex-start; gap: 12px; padding: 8px 0; font-size: 15.5px; color: #374151; line-height: 1.7; }
+.tick { color: #14b8a6; font-weight: 800; flex-shrink: 0; margin-top: 2px; }
+.final-quote { background: linear-gradient(140deg, #0f172a 0%, #1a3050 100%); border-radius: 16px; padding: 34px 38px; margin: 28px 0 0; text-align: center; }
+.final-quote p { font-size: 18px; color: #e2e8f0; font-style: italic; line-height: 1.7; margin: 0; }
+.final-quote p strong { color: #7dd3fc; font-style: normal; }
+.sources-wrap { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 32px 38px; margin-top: 48px; }
+.sources-wrap h2 { font-size: 20px; font-weight: 800; color: #0f172a; margin: 0 0 6px; padding-left: 16px; border-left: 4px solid #0ea5e9; }
+.sources-wrap .src-intro { font-size: 13.5px; color: #64748b; margin: 8px 0 20px; font-style: italic; }
+.sources-list { padding-left: 20px; margin: 0; }
+.sources-list li { font-size: 13px; color: #374151; margin-bottom: 9px; line-height: 1.62; }
+.sources-list a { color: #0ea5e9; text-decoration: none; }
+.sources-list a:hover { text-decoration: underline; }
+.sources-list .s-tag { display: inline-block; background: #e0f2fe; color: #0369a1; font-size: 10px; font-weight: 700; padding: 1px 7px; border-radius: 4px; margin-right: 6px; vertical-align: middle; }
+.gp-foot { text-align: center; padding: 26px 0 8px; font-size: 14.5px; color: #94a3b8; font-style: italic; }
+.post-title.entry-title, h3.post-title, .entry-header .post-title, .entry-title { display: none !important; }
+@media (max-width: 640px) {
+  .gp-hero { padding: 38px 22px; }
+  .gp-hero h1 { font-size: 26px; }
+  .cmp-two { grid-template-columns: 1fr; }
+  .pf-card { grid-template-columns: 1fr; }
+  .pillars { grid-template-columns: 1fr; }
+  .sevo-grid { grid-template-columns: 1fr; }
+  .sig-grid { grid-template-columns: 1fr 1fr; }
+  .gp-sec h2 { font-size: 21px; }
+  .cl-dark { padding: 30px 22px; }
+  .concl { padding: 28px 22px; }
+  .sc { padding: 24px 22px; }
+  .stat-row { grid-template-columns: 1fr; }
+  .sources-wrap { padding: 24px 20px; }
+  .final-quote { padding: 26px 22px; }
+}
+.concl-ttl { font-size: 24px; font-weight: 800; color: #0f172a; margin: 0 0 16px; line-height: 1.28; display: block; }
+.src-ttl { font-size: 20px; font-weight: 800; color: #0f172a; margin: 0 0 6px; padding-left: 16px; border-left: 4px solid #0ea5e9; display: block; }
+.gp-sec-h3 { font-size: 19px; font-weight: 700; color: #1e293b; margin: 34px 0 12px; display: block; }
+.gp-share { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 26px 32px; margin: 44px 0; text-align: center; }
+.gp-share-lbl { font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 18px; }
+.gp-share-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.gp-sh-btn { display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 0 20px; border-radius: 22px; font-size: 13px; font-weight: 700; color: #fff; text-decoration: none; gap: 7px; transition: opacity 0.2s ease, transform 0.2s ease; letter-spacing: 0.3px; }
+.gp-sh-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+.gp-sh-x  { background: #000; }
+.gp-sh-li { background: #0077b5; }
+.gp-sh-wa { background: #25d366; }
+.gp-sh-rd { background: #ff4500; }
+.post-img { display:block; margin:0 auto; max-width:100%; height:auto; border-radius:10px; }
+#gp-pgbar { position: fixed; top: 0; left: 0; width: 0%; height: 3px; z-index: 9999; background: linear-gradient(90deg, #0ea5e9, #14b8a6); pointer-events: none; }
+#gp-top { position: fixed; bottom: 26px; right: 26px; width: 44px; height: 44px; background: linear-gradient(135deg, #0ea5e9, #14b8a6); border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(14px); transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.3s ease; z-index: 9998; box-shadow: 0 4px 16px rgba(14,165,233,0.30); }
+#gp-top.gp-vis { opacity: 1; transform: translateY(0); }
+#gp-top:hover  { box-shadow: 0 6px 24px rgba(14,165,233,0.50); }
+#gp-top svg    { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+@keyframes gpIn { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+.gp-hero-tag { animation: gpIn 0.65s 0.10s cubic-bezier(0.22,1,0.36,1) both; }
+.gp-hero h1 { animation: gpIn 0.72s 0.22s cubic-bezier(0.22,1,0.36,1) both; }
+.gp-hero .hero-sub { animation: gpIn 0.72s 0.38s cubic-bezier(0.22,1,0.36,1) both; }
+.gpa { opacity: 0; transform: translateY(30px); transition: opacity 0.72s cubic-bezier(0.22,1,0.36,1), transform 0.72s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease !important; will-change: opacity, transform; }
+.gpa.gpa-left  { transform: translateX(-26px); }
+.gpa.gpa-right { transform: translateX(26px);  }
+.gpa.gpa-scale { transform: scale(0.92);       }
+.gpa.gpa-go    { opacity: 1 !important; transform: none !important; }
+</style>
+
+<link rel="apple-touch-icon" href="https://albertabishek.blogspot.com/favicon.ico" sizes="180x180"/>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">ALBERT ABISHEK .I </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Article.html" class="active">Article</a>
+            <a href="seobility.html">Seobility</a>
+        </nav>
+    </header>
+
+<div id="gp-pgbar"></div>
+<button id="gp-top" aria-label="Back to top"><svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg></button>
+
+<div class="gp">
+
+  <div class="gp-hero">
+    <div class="gp-hero-tag">Search Strategy · 2026</div>
+    <h1>How AI Is Replacing Google Search in 2026 — What Businesses Must Do Now</h1>
+    <p class="hero-sub">How Google, ChatGPT, Gemini, Claude, and Perplexity actually find, trust, and recommend businesses — and what you need to do differently right now.</p>
+  </div>
+
+  <div class="gp-sec">
+    <h2 class="gpa gpa-left">The Moment That Changed How I Think About Search</h2>
+    <p>Last month I was working with a real estate client in Mumbai. They had the #1 Google ranking for "luxury apartments Mumbai" — solid meta tags, perfect keyword density, 50 backlinks from local news sites. Classic SEO win.</p>
+    <p>Guess what happened next.</p>
+    <p><strong>Zero new leads from that ranking.</strong></p>
+    <p>Meanwhile, their competitor — sitting at #7 on Google — got cited in ChatGPT's answer to "best luxury apartments in Mumbai." Three new client calls in one week. All from AI.</p>
+    <p>I sat there staring at the analytics and thought: <em>What just happened here?</em></p>
+    <div class="c-quote gpa">Ranking alone is no longer enough. That one observation sent me down a six-month rabbit hole of testing every major AI platform to understand how they actually find, evaluate, and recommend businesses. This article is what I found.</div>
+    <div class="img-ph gpa">
+      <div class="separator" style="clear: both; text-align:center;"><img alt="AI-generated illustration showing how a competitor ranked #7 on Google received new client leads through ChatGPT citations, while the #1-ranked business got zero leads — the core difference between SEO and GEO in 2026" border="0" data-original-height="1024" data-original-width="1536" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5wdw67c5P82h8drD97WLhp4yAK9H4dTjYmXs2CrbCADWpq3tS0EqufUsL_1Fzxxl0ML3CSni3ZFGa6ZnrjKRK7RCuAfTJteiUHvihO8uCTEWJQQbM6cmbFpDtt7sU3ngcehSuqUoEvcXrT1eUXm9VxDybCP9mxVlqN91lzc5o0uaNoEsXgy5gng3_vEuN/s1600/ChatGPT%20Image%20Jun%2018,%202026,%2010_57_23%20AM.png" title="Illustration: How a #7 Google result beats a #1 ranking via AI citations" class="post-img" loading="lazy" /></div>
+    </div>
+  </div>
+
+  <div class="gp-sec">
+    <h2 class="gpa gpa-left">The Reality: Zero-Click Is Already the Default</h2>
+    <p>I had a SaaS client in India — strong product, solid content, consistently ranking for their main keywords. Traffic was healthy. Then AI Overviews arrived on Google.</p>
+    <p>Within three months, <strong>traffic dropped 40%.</strong> Not because their content got worse. Not because a competitor outranked them. Because AI was answering the queries directly, and users weren't clicking through to any website.</p>
+    <p>Their experience is now the industry norm. A pre-registered field study published in April 2026 confirmed that AI Overviews reduce outbound organic clicks by <strong>38%</strong> on the queries where they appear.<a class="src-link" href="#s3">[3]</a> Ahrefs data from November 2025 found that <strong>99.9%</strong> of informational keywords now trigger an AI Overview<a class="src-link" href="#s5">[5]</a> — meaning virtually every "how to" or "what is" query is now answered directly on the results page before a single user reaches your site.</p>
+    <div class="stat-row gpa">
+      <div class="stat-card"><div class="stat-num">64.82%</div><div class="stat-desc">of Google searches now end without any click to a website</div><div class="stat-src">Digital Applied, April 2026 <a class="src-link" href="#s1">[1]</a></div></div>
+      <div class="stat-card"><div class="stat-num">93%</div><div class="stat-desc">zero-click rate in Google's newer AI Mode</div><div class="stat-src">Semrush, September 2025 <a class="src-link" href="#s2">[2]</a></div></div>
+      <div class="stat-card"><div class="stat-num">-38%</div><div class="stat-desc">organic CTR drop when AI Overviews appear on a query</div><div class="stat-src">Field study, Search Engine Journal, April 2026 <a class="src-link" href="#s3">[3]</a></div></div>
+    </div>
+    <p>Gartner forecast a <strong>25% drop in traditional search volume by 2026</strong>.<a class="src-link" href="#s6">[6]</a> Sectors like health, SaaS, and media have already recorded <strong>40–70% year-over-year organic traffic losses</strong> as AI Overviews expanded into their categories.<a class="src-link" href="#s7">[7]</a></p>
+    <div class="c-insight gpa"><div class="ci-lbl">🔑 Key Insight</div><p>I thought I was failing. I wasn't failing. I was optimizing for a metric — clicks — that the market was moving away from. According to Bain &amp; Company, <strong>80% of consumers</strong> now rely on AI-generated results for <strong>at least 40% of their searches</strong>.<a class="src-link" href="#s17">[17]</a> The destination has changed. The strategy has to change with it.</p></div>
+    <div class="img-ph gpa">
+      <div class="separator" style="clear: both; text-align:center;"><img alt="Chart showing the dramatic rise of zero-click searches in 2026, with 64.82% of Google searches ending without a click and AI Overviews reducing organic click-through rates by 38%" border="0" data-original-height="1024" data-original-width="1536" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEa4yX10jjsvFsGqfmy_NFMkx894pIXYf5RKHLXUmZSYLLPNxVhpt3nfNZWBKazO2USAC09GI4FgRjjFLejfvyZG2QtF0_cW6wGd-r5GrcryQfF5w9RdgWExuPme7snP0IMUlISH_prCoQSjrMKyXVE_PHHsBxHsRSwR9U5TYu3wLqTX8Nhd3Lpiu1gF0v/s1600/ChatGPT%20Image%20Jun%2018,%202026,%2002_23_48%20PM.png" title="Chart: Zero-click search statistics and AI Overview CTR impact 2026" class="post-img" loading="lazy" /></div>
+    </div>
+  </div>
+
+  <div class="gp-sec">
+    <h2 class="gpa gpa-left">Two Different Games: SEO vs GEO</h2>
+    <p>Most content on this topic overcomplicates it. Here's the plain version.</p>
+    <div class="cmp-two">
+      <div class="cmp-card seo gpa gpa-left"><div class="cmp-hd">🔗 Traditional SEO</div><ul><li>Optimizes for Google's blue-link rankings</li><li>Targets keywords, builds backlinks</li><li>Competes for position #1</li><li>Built on <strong>links</strong></li><li>Metric: click-through rate</li><li>Gets you <strong>ranked</strong></li></ul></div>
+      <div class="cmp-card geo gpa gpa-right"><div class="cmp-hd">🤖 GEO</div><ul><li>Optimizes for citation in AI answers</li><li>Optimizes for clarity and extractability</li><li>Appears in ChatGPT, Gemini, Claude, Perplexity</li><li>Built on <strong>language</strong></li><li>Metric: reference rate</li><li>Gets you <strong>recommended</strong></li></ul></div>
+    </div>
+    <p>When someone asks ChatGPT "best CRM for small business in India," they don't get 10 links to evaluate. They get a direct answer with 3–4 business names. <strong>Being one of those names is the new version of ranking #1.</strong></p>
+    <p>ChatGPT alone now serves <strong>900 million weekly active users</strong><a class="src-link" href="#s14">[14]</a> — with 37% of consumers starting their searches with an AI tool rather than a traditional search engine.<a class="src-link" href="#s15">[15]</a> AI referral traffic has grown <strong>527% year-over-year</strong><a class="src-link" href="#s16">[16]</a> and converts at <strong>4.4× the rate</strong> of standard organic traffic.<a class="src-link" href="#s13">[13]</a> This isn't a future trend. It's the current reality.</p>
+    <div class="img-ph gpa">
+      <div class="separator" style="clear: both; text-align:center;"><img alt="Side-by-side comparison diagram: Traditional SEO optimized for Google blue-link rankings versus Generative Engine Optimization (GEO) optimized for AI citations across ChatGPT, Gemini, Claude, and Perplexity" border="0" data-original-height="1024" data-original-width="1536" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcDf5vqbgDSdV3Rgg5T1VMxjie4ClLHN6B9HwQMI4BhJwdsFhy8qQxJUbL5qstrJlkNkWBjyL8YirtXi3RkLhvTrRVslRLtoaXFCqsRzJ4tDE2CfTMmTBJvk_RB7ISPnwQ-jvVtqn_QHI2uB5TbUyAb5aZl-AYbFwU_YtbTLQJ16VbxA7/s1600/ChatGPT%20Image%20Jun%2018,%202026,%2002_25_55%20PM.png" title="Comparison: Traditional SEO vs Generative Engine Optimization (GEO)" class="post-img" loading="lazy" /></div>
+    </div>
+  </div>
+
+  <div class="gp-sec">
+    <h2 class="gpa gpa-left">The Observation That Confirmed It: How AI Models Actually Research</h2>
+    <p>When I tested Claude with the query "best real estate agency in Mumbai," something stood out immediately: it didn't retrieve one result and compose an answer. It generated a series of search queries <em>before</em> responding — casting a much wider research net than other models.</p>
+    <p>Here's an illustrative snapshot of the query types it generated:</p>
+    <div class="qbox gpa">
+      <div class="qbox-title">🔍 Claude's Research Queries — "Best Real Estate Agency in Mumbai"</div>
+      <div class="qbox-row"><span class="q-cat">Brand Names</span><span class="q-val">"India Sotheby's International Realty" Mumbai, "Anarock Property Consultants" Mumbai</span></div>
+      <div class="qbox-row"><span class="q-cat">Reviews</span><span class="q-val">best real estate brokers Mumbai reviews, most reputable real estate brokers Mumbai Reddit</span></div>
+      <div class="qbox-row"><span class="q-cat">Service Type</span><span class="q-val">best luxury real estate agency Mumbai, best commercial real estate agency Mumbai</span></div>
+      <div class="qbox-row"><span class="q-cat">Neighborhood</span><span class="q-val">top real estate agents Bandra Mumbai, top real estate agents Andheri</span></div>
+      <div class="qbox-row"><span class="q-cat">Comparisons</span><span class="q-val">Mumbai real estate agency comparison 2024</span></div>
+    </div>
+    <p>AI doesn't randomly pick businesses. It researches them across multiple source types. <strong>If your business name doesn't appear in reviews or Reddit threads</strong>, a thorough AI research pass <strong>won't find you</strong> — no matter how well your website is optimized.</p>
+    <p>The data confirms exactly why. BrightEdge's February 2026 analysis found that <strong>89% of AI citations now come from beyond the top-100 organic listings</strong>.<a class="src-link" href="#s10">[10]</a> Meanwhile, the overlap between top-10 Google rankings and AI Overview citations <strong>collapsed from 75% in mid-2025 to just 17–38% by early 2026</strong>.<a class="src-link" href="#s11">[11]</a> A strong Google ranking no longer guarantees — or even predicts — AI visibility.</p>
+    <div class="stat-row gpa">
+      <div class="stat-card"><div class="stat-num">89%</div><div class="stat-desc">of AI citations come from beyond the top-100 organic rankings</div><div class="stat-src">BrightEdge, February 2026 <a class="src-link" href="#s10">[10]</a></div></div>
+      <div class="stat-card"><div class="stat-num">17–38%</div><div class="stat-desc">top-10 ranking → AI Overview citation overlap (down from 75%)</div><div class="stat-src">BrightEdge / Mersel AI, early 2026 <a class="src-link" href="#s11">[11]</a></div></div>
+      <div class="stat-card"><div class="stat-num">+35%</div><div class="stat-desc">organic CTR boost for brands cited inside an AI Overview</div><div class="stat-src">Seer Interactive, November 2025 <a class="src-link" href="#s4">[4]</a></div></div>
+    </div>
+    <div class="img-ph gpa">
+      <div class="separator" style="clear: both; text-align:center;"><img alt="Diagram showing how AI models like Claude generate multiple parallel search queries across brand names, reviews, service types, neighborhoods, and competitor comparisons before recommending a business" border="0" data-original-height="1024" data-original-width="1536" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjK4TDDR7_cvofmpQqngCwBTyrCmCQifSGSHDKCKVIIQEgCXqUeOL3Gpn9QQ2SWCbp6Ieqsn8Pi3y-ot2NqyH63vnnsH29Cj1cK11h56sDaXNRfoT__093tYSGPnmiWG5_RvTWrd_m2t2jUVnsjVczFVHvtFuLE5xgsvLU_TKPV5jaeG5UMZ4jo6sQGaLze/s1600/ChatGPT%20Image%20Jun%2018,%202026,%2010_56_05%20AM.png" title="Diagram: How AI models research businesses across multiple query types" class="post-img" loading="lazy" /></div>
+    </div>
+    <div class="gp-sec-h3 gpa gpa-left">🎯 Practical Target: Presence Across at Least 5 of These</div>
+    <ul>
+      <li>Google Reviews (with your exact business name)</li>
+      <li>2+ independent review platforms (Trustpilot, Clutch, etc.)</li>
+      <li>Reddit or forum discussions in your niche</li>
+      <li>Local news or industry comparison articles</li>
+      <li>Google Business Profile (exact name + service tags)</li>
+      <li>Location-specific content (neighborhood-level pages)</li>
+      <li>Service-specific content (luxury, commercial, budget, etc.)</li>
+    </ul>
+  </div>
+
+  <div class="gp-sec">
+    <h2 class="gpa gpa-left">How Each AI Platform Actually Works</h2>
+    <p>I ran the same query across all five major platforms. Here's how they differ in what they prioritize — and why it matters for your strategy.</p>
+    <div class="pf-list gpa-stagger">
+      <div class="pf-card pf-g"><div><div class="pf-nm">🔵 Google AI Overviews</div><div class="pf-src">Google's own index + AI layer</div></div><div><div class="pf-lbl">What It Trusts</div><div class="pf-txt">E-E-A-T signals and structured data. Historical domain trust carries significant weight.</div></div><div><div class="pf-lbl">Freshness Weight</div><div class="pf-txt">Moderate — established authority still dominates over recency.</div></div></div>
+      <div class="pf-card pf-c"><div><div class="pf-nm">🟢 ChatGPT</div><div class="pf-src">Bing index + real-time web search</div></div><div><div class="pf-lbl">What It Trusts</div><div class="pf-txt">Strong SERP presence combined with brand mentions across the web. 900M weekly users as of Feb 2026.</div></div><div><div class="pf-lbl">Freshness Weight</div><div class="pf-txt">Moderate — good across general-purpose queries.</div></div></div>
+      <div class="pf-card pf-ge"><div><div class="pf-nm">🟣 Gemini</div><div class="pf-src">Google's index, similar to AI Overviews</div></div><div><div class="pf-lbl">What It Trusts</div><div class="pf-txt">E-E-A-T weighting. Organic ranking still carries meaningful influence. 750M monthly users.</div></div><div><div class="pf-lbl">Freshness Weight</div><div class="pf-txt">Low-moderate — historical domain credibility still anchors results strongly.</div></div></div>
+      <div class="pf-card pf-cl"><div><div class="pf-nm">🟠 Claude</div><div class="pf-src">Anthropic's web browsing</div></div><div><div class="pf-lbl">What It Trusts</div><div class="pf-txt">Content clarity and multi-source brand presence. Notably thorough retrieval — generates multiple query types before responding.</div></div><div><div class="pf-lbl">Freshness Weight</div><div class="pf-txt">Moderate — rewards consistent presence across trusted sources.</div></div></div>
+      <div class="pf-card pf-px"><div><div class="pf-nm">🩵 Perplexity</div><div class="pf-src">Real-time multi-source retrieval</div></div><div><div class="pf-lbl">What It Trusts</div><div class="pf-txt">Freshness aggressively. A recently updated page on a newer domain can outperform stale content on an established one. 100M+ MAU as of 2026.</div></div><div><div class="pf-lbl">Freshness Weight</div><div class="pf-txt"><strong>High</strong> — the fastest-moving of all major platforms.</div></div></div>
+    </div>
+    <div class="c-insight gpa"><div class="ci-lbl">⚠️ Critical Note</div><p>Platforms are not uniform on freshness vs. authority. Perplexity rewards freshness aggressively. Gemini and AI Overviews still anchor on E-E-A-T. <strong>Don't apply a single strategy uniformly — adjust for the platform.</strong></p></div>
+  </div>
+
+  <div class="gp-sec">
+    <h2 class="gpa gpa-left">The 7 Signals That Work Across All Platforms</h2>
+    <p>These are the signals that showed up consistently across my testing — used with real clients, not just theory. They're also validated by the first peer-reviewed academic framework for GEO, published by researchers at Princeton, Georgia Tech, IIT Delhi, and the Allen Institute for AI at KDD 2024.<a class="src-link" href="#s9">[9]</a></p>
+    <div class="sig-grid gpa-stagger-sc">
+      <div class="sig-card"><span class="sig-ico">🗂️</span><div class="sig-num">Signal 01</div><div class="sig-nm">Schema Markup</div><div class="sig-dsc">Entity, product, and review schema. Key content and schema must be present in the initial HTML response — not just loaded via JavaScript.</div></div>
+      <div class="sig-card"><span class="sig-ico">📄</span><div class="sig-num">Signal 02</div><div class="sig-nm">Answer-First Structure</div><div class="sig-dsc">Put the direct answer in the first 100 words. The Princeton GEO study found this single structural change, combined with adding data, improves AI citation visibility by up to <strong>41%</strong>.<a class="src-link" href="#s9">[9]</a></div></div>
+      <div class="sig-card"><span class="sig-ico">📢</span><div class="sig-num">Signal 03</div><div class="sig-nm">Brand Mentions + Sentiment</div><div class="sig-dsc">Mentioned across podcasts, reviews, forums. An Ahrefs study of 75,000 brands found brand mentions correlate <strong>3× more strongly</strong> with AI visibility than backlinks (0.664 vs. 0.218 correlation).<a class="src-link" href="#s8">[8]</a></div></div>
+      <div class="sig-card"><span class="sig-ico">🔗</span><div class="sig-num">Signal 04</div><div class="sig-nm">Semantic Clarity</div><div class="sig-dsc">Build topic clusters that connect logically. Demonstrate depth through interconnected content, not isolated keyword pages.</div></div>
+      <div class="sig-card"><span class="sig-ico">💬</span><div class="sig-num">Signal 05</div><div class="sig-nm">Citation Density</div><div class="sig-dsc">How often credible external sources reference you. Publishing across a diverse range of trusted platforms can increase AI citations by up to <strong>325%</strong> compared to publishing only on your own site.<a class="src-link" href="#s12">[12]</a></div></div>
+      <div class="sig-card"><span class="sig-ico">📅</span><div class="sig-num">Signal 06</div><div class="sig-nm">Freshness</div><div class="sig-dsc">Update key pages quarterly. Real estate and restaurants saw AI Overview growth of 258% and 273% respectively in 2025 — stale content in fast-growing categories is an accelerating liability.<a class="src-link" href="#s7">[7]</a></div></div>
+      <div class="sig-card"><span class="sig-ico">✅</span><div class="sig-num">Signal 07</div><div class="sig-nm">Clean Extractable Formatting</div><div class="sig-dsc">Bullet points, tables, clear H2/H3 structure. Make content easy for AI to parse, extract, and cite as a direct answer.</div></div>
+    </div>
+    <div class="img-ph gpa">
+      <div class="separator" style="clear: both; text-align:center;"><img alt="Infographic displaying the 7 key GEO signals for AI citation visibility: schema markup, answer-first structure, brand mentions, semantic clarity, citation density, content freshness, and clean extractable formatting" border="0" data-original-height="1086" data-original-width="1448" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgu3fElKMMtWF01Me_SB47G6vdf_uDIxmTy9Ib37U_1P7UVQesW43BC_ETg-sgfPP9c-LaW9_d6L8eyGVhFJTzlRkBBT_RoEQol8FP_srvfcI_-N3tN6pWtYkiBKVAR8yiRmAOEHHBRiiIfvgbnTMBYnLHtgAwUCi9LOU_CZtrORAjX4R-Ifgf9A1i3LB6m/s1600/ChatGPT%20Image%20Jun%2018,%202026,%2002_35_37%20PM.png" title="Infographic: The 7 GEO signals that improve AI citation visibility" class="post-img" loading="lazy" /></div>
+    </div>
+  </div>
+
+  <div class="gp-sec">
+    <h2 class="gpa gpa-left">The Four Pillars AI Uses to Evaluate Businesses</h2>
+    <p>Beyond individual signals, there's a cleaner way to think about what AI platforms are actually evaluating. After months of testing, it consistently breaks down into four dimensions.</p>
+    <div class="pillars gpa-stagger-sc">
+      <div class="pillar"><span class="pillar-ico">🗂️</span><div class="pillar-nm">Structured Data</div><div class="pillar-dsc">Schema identifying your business name, location, category, and services. Without it, AI can't reliably categorize or surface you.</div></div>
+      <div class="pillar"><span class="pillar-ico">📚</span><div class="pillar-nm">Content Authority</div><div class="pillar-dsc">Clear, consistent answers to the questions your audience asks. A coherent topic cluster showing depth over time — not scattered posts.</div></div>
+      <div class="pillar"><span class="pillar-ico">⭐</span><div class="pillar-nm">Citation Frequency</div><div class="pillar-dsc">How often credible external sources reference you — reviews, publications, podcasts, forums. Earned authority, not owned content.</div></div>
+      <div class="pillar"><span class="pillar-ico">🏷️</span><div class="pillar-nm">Entity Clarity</div><div class="pillar-dsc">Consistent name, location, and category across your entire web presence. Google Business Profile, directories, and website in complete alignment.</div></div>
+    </div>
+    <p>Businesses strong across all four tend to get cited more reliably than those optimized in only one or two dimensions.</p>
+  </div>
+
+  <div class="gp-sec">
+    <h2 class="gpa gpa-left">What's Actually Shifting in 2026</h2>
+    <p>Five changes I've observed directly — and why most businesses haven't adjusted yet.</p>
+    <ul class="shifts">
+      <li class="gpa" style="transition-delay:0ms"><div class="sh-dot"></div><div class="sh-txt"><strong>Topic clusters over keyword targeting.</strong> Isolated keyword pages are losing ground. Interconnected content that demonstrates real depth on a topic is what AI rewards. The Princeton GEO research confirmed that comprehensive topical coverage — not keyword density — is the strongest structural predictor of AI citation.<a class="src-link" href="#s9">[9]</a></div></li>
+      <li class="gpa" style="transition-delay:100ms"><div class="sh-dot"></div><div class="sh-txt"><strong>Freshness outperforming domain age — selectively.</strong> For many query types on Perplexity, a recently updated page on a newer domain outperforms stale content on an established one. Caveat: Google-based AI still heavily weights historical domain trust. The shift is real but not uniform — know which platform you're optimizing for.</div></li>
+      <li class="gpa" style="transition-delay:200ms"><div class="sh-dot"></div><div class="sh-txt"><strong>Brand mentions outweighing backlinks.</strong> Ahrefs' 75,000-brand study (August 2025) found brand mentions correlate 3× more strongly with AI visibility than backlinks.<a class="src-link" href="#s8">[8]</a> AI language models are trained on raw text, not link graphs. Authentic appearances in podcasts, forums, and reviews matter more than link counts.</div></li>
+      <li class="gpa" style="transition-delay:300ms"><div class="sh-dot"></div><div class="sh-txt"><strong>Answer positioning over SERP position.</strong> Being cited in an AI answer drives leads even when you're not ranked #1. Seer Interactive data shows brands cited inside an AI Overview see <strong>+35% more organic clicks</strong> than non-cited brands on the same query<a class="src-link" href="#s4">[4]</a> — the performance metric has fundamentally changed.</div></li>
+      <li class="gpa" style="transition-delay:400ms"><div class="sh-dot"></div><div class="sh-txt"><strong>Multi-platform strategy is now table stakes.</strong> ChatGPT, Gemini, Claude, and Perplexity have meaningfully different retrieval behaviors. AI referral traffic has grown 527% year-over-year<a class="src-link" href="#s16">[16]</a> and converts at 4.4× the rate of standard organic.<a class="src-link" href="#s13">[13]</a> A strategy built only for Google leaves most of this value on the table.</div></li>
+    </ul>
+    <div class="c-insight gpa"><div class="ci-lbl">💡 Worth Knowing</div><p>User-generated content has become a primary authority input. Reddit threads, YouTube comments, authentic forum discussions — these are key sources AI uses to form brand perception. Getting genuinely active in these spaces, answering questions without spamming, creates durable AI visibility. The Ahrefs data backs this: it's where brand mentions that actually move the needle come from.</p></div>
+  </div>
+
+  <div class="gp-sec">
+    <h2 class="gpa gpa-left">7 Actionable GEO Strategies</h2>
+    <div class="sc gpa"><div class="sc-num">1</div><div class="sc-h3">Answer-First Content</div><p>Every key page should lead with a direct answer. AI extracts what's upfront — long introductions bury the content that would get you cited. The Princeton GEO study (KDD 2024) found that adding statistics and placing answers upfront improves AI citation visibility by up to 41%.<a class="src-link" href="#s9">[9]</a></p><div class="ba"><div class="ba-row ba-bef"><span class="ba-lbl">❌ Before</span>"Marketing automation has become essential for modern businesses. In this article, we'll explore the landscape and help you understand..."</div><div class="ba-row ba-aft"><span class="ba-lbl">✅ After</span>"The best marketing automation tools for Indian startups are HubSpot and ActiveCampaign. For localized SMS and calling workflows, Exotel and MyOperator are worth evaluating."</div></div><p style="color: #64748b; font-size: 14px; margin-top: 12px;">I rewrote 10 blog posts for a SaaS client using this structure — several got cited in ChatGPT within two months.</p></div>
+    <div class="sc gpa"><div class="sc-num">2</div><div class="sc-h3">Build Brand Authority Through Mentions</div><p>The goal is to appear in authentic third-party conversations across multiple source types. A real estate client who started genuinely answering questions on Reddit appeared in Perplexity results for Mumbai property queries within two months. The mechanism: brand mentions correlate 3× more strongly with AI visibility than backlinks.<a class="src-link" href="#s8">[8]</a></p><ul><li>Podcast appearances</li><li>Review platforms (Google, Trustpilot, G2, Clutch)</li><li>Forums (Reddit, Quora, industry-specific)</li><li>LinkedIn and professional networks</li><li>Local or industry press</li></ul><p style="color: #64748b; font-size: 14px; margin-top: 4px;">Publishing across a diverse range of trusted platforms can increase AI citations by up to 325% compared to publishing only on your own site.<a class="src-link" href="#s12">[12]</a></p></div>
+    <div class="sc gpa"><div class="sc-num">3</div><div class="sc-h3">Master Structured Data</div><p>Add at minimum: <strong>entity schema</strong> (name, location, category), <strong>product/service schema</strong>, and <strong>review schema</strong>.</p><div class="c-quote" style="font-size: 15px; margin: 14px 0px;">⚡ <strong>Technical note:</strong> If your site uses heavy client-side JavaScript rendering, AI crawlers may not parse your content at all. Test with a JS-disabled browser. Move critical pages to server-side rendering (Next.js, Nuxt) or static generation if key content isn't in the initial HTML.</div></div>
+    <div class="sc gpa"><div class="sc-num">4</div><div class="sc-h3">Create Topic Clusters</div><p>Build interconnected pages around a core topic instead of isolated keyword targets. The Princeton GEO research confirmed that topic cluster depth — not individual page optimization — is what AI systems evaluate for authority. Example structure for a "marketing automation" practice:</p><ul><li><strong>Core page:</strong> "Marketing Automation for Indian Startups — Complete Guide"</li><li><strong>Sub-page A:</strong> "Best Tools for Small Business Teams"</li><li><strong>Sub-page B:</strong> "Setting Up Your First Automation Workflow"</li><li><strong>Sub-page C:</strong> "Pricing Comparison 2026"</li></ul><p style="color: #64748b; font-size: 14.5px;">The cluster — not the individual page — is what establishes semantic depth.</p></div>
+    <div class="sc gpa"><div class="sc-num">5</div><div class="sc-h3">Prioritize Freshness</div><p>Establish a quarterly content review cycle. Update statistics, add new examples, refresh case studies. Real estate and restaurants have seen AI Overview growth of 258% and 273% respectively since early 2025<a class="src-link" href="#s7">[7]</a> — categories where stale content gets displaced fastest. Freshness is most impactful for Perplexity but relevant across all platforms.</p></div>
+    <div class="sc gpa"><div class="sc-num">6</div><div class="sc-h3">Multi-Platform Visibility</div><p>Each platform requires different emphasis. Don't build a single strategy and assume it works everywhere.</p><div class="ps-list"><div class="ps-row ps-px"><span class="ps-nm">🩵 Perplexity</span><span class="ps-tip">Prioritize freshness and multi-source brand mentions</span></div><div class="ps-row ps-ge"><span class="ps-nm">🟣 Gemini / AI Overviews</span><span class="ps-tip">Prioritize E-E-A-T signals and structured authority</span></div><div class="ps-row ps-cl"><span class="ps-nm">🟠 Claude</span><span class="ps-tip">Prioritize content clarity and brand presence across trusted sources</span></div><div class="ps-row ps-ch"><span class="ps-nm">🟢 ChatGPT</span><span class="ps-tip">Prioritize strong existing SERP presence plus brand signals</span></div></div></div>
+    <div class="sc gpa"><div class="sc-num">7</div><div class="sc-h3">Conversational Content</div><p>Write for how people ask questions naturally, not how they type keywords. Question-format content aligns with how AI searches for answers to pass back to users. Ahrefs data shows queries of 8+ words — conversational, specific questions — trigger AI Overviews far more often than shorter keyword-style queries.<a class="src-link" href="#s5">[5]</a></p><ul><li>"How do I find a reliable contractor in Pune?"</li><li>"What's the best CRM for a 10-person startup?"</li><li>"Why does my Google ranking keep dropping?"</li></ul></div>
+    <div class="img-ph gpa">
+      <div class="separator" style="clear: both; text-align:center;"><img alt="Visual guide summarising 7 actionable GEO strategies: answer-first content, brand authority through mentions, structured data, topic clusters, content freshness, multi-platform visibility, and conversational content formats" border="0" data-original-height="887" data-original-width="1774" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsK2ftkKmu2V-xznafjHY8FEFAja9gowwAAlfTrYudLFWMDFy7YgGRW4NXh6PwevkmfOyZx4MIwmCVBMineCLnj3W153mP_cXVP3YpsKVax9UUZ1nkUGOW180Y0IvmD6sS58spko-lMD_jB65RE9X5ZDuIW6J6JGZsdTHmpC6e_-fcxTkU6GsTvKaJSjBN/s1600/ChatGPT%20Image%20Jun%2018,%202026,%2010_44_29%20AM.png" title="Guide: 7 actionable GEO strategies for AI search visibility in 2026" class="post-img" loading="lazy" /></div>
+    </div>
+  </div>
+
+  <div class="gp-sec">
+    <h2 class="gpa gpa-left">The SEvO Mindset: Search Everywhere Optimization</h2>
+    <p>The strategic shift isn't "replace SEO with GEO." It's "stop treating Google as the only destination where your customers look for you."</p>
+    <div class="sevo gpa"><div class="sevo-eye">The New Framework</div><div class="sevo-ttl">SEvO = SEO + GEO + AEO</div><div class="sevo-tag">Total Search Visibility across every platform where your customers are looking</div><div class="sevo-grid"><div class="sevo-item"><div class="sevo-lbl">SEO</div><div class="sevo-dsc">Traditional blue-link ranking — still relevant, not dead</div></div><div class="sevo-item"><div class="sevo-lbl">GEO</div><div class="sevo-dsc">AI citation visibility across ChatGPT, Gemini, Claude, Perplexity</div></div><div class="sevo-item"><div class="sevo-lbl">AEO</div><div class="sevo-dsc">Featured snippets, answer boxes, voice search</div></div></div></div>
+    <div class="stat-row gpa">
+      <div class="stat-card"><div class="stat-num">900M</div><div class="stat-desc">ChatGPT weekly active users — more than doubled in 14 months</div><div class="stat-src">OpenAI, February 2026 <a class="src-link" href="#s14">[14]</a></div></div>
+      <div class="stat-card"><div class="stat-num">37%</div><div class="stat-desc">of consumers now begin their searches with an AI tool, not a search engine</div><div class="stat-src">InstantPress, 2026 <a class="src-link" href="#s15">[15]</a></div></div>
+      <div class="stat-card"><div class="stat-num">4.4×</div><div class="stat-desc">better conversion rate for AI-referred visitors vs. standard organic traffic</div><div class="stat-src">Semrush, June 2025 <a class="src-link" href="#s13">[13]</a></div></div>
+    </div>
+    <div class="img-ph gpa">
+      <div class="separator" style="clear: both; text-align:center;"><img alt="SEvO framework diagram combining traditional SEO, Generative Engine Optimization (GEO), and Answer Engine Optimization (AEO) to achieve total search visibility across Google, ChatGPT, Gemini, Claude, and Perplexity" border="0" data-original-height="1086" data-original-width="1448" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMw3mIml652Wn8cqh0HH-b7EtR7qNX8BXPcXV1D5Y7vYcQOtON2gsfwvcUht0WbxX6iNIIOg2ZlMvbJRNKelKHXoj8_0-rWsXYr0ck2TmRhc3NuI1mc9BldO8pu1j8tmf4tEDYNsBaACo20DIYY9FGoCE1vULdwIqC9OPgXYLO7MRHcUK-LRTQJ16VbxA7/s1600/ChatGPT%20Image%20Jun%2018,%202026,%2002_37_18%20PM.png" title="Framework: SEvO — combining SEO, GEO, and AEO for total search visibility" class="post-img" loading="lazy" /></div>
+    </div>
+  </div>
+
+  <div class="gp-sec">
+    <h2 class="gpa gpa-left">Quick Checklist: Is Your Business Visible to AI?</h2>
+    <p>If you're missing 4 or more of these, AI probably can't find or reliably trust your business yet — regardless of your Google ranking.</p>
+    <div class="cl-dark">
+      <div class="cl-ttl">AI Visibility Checklist</div>
+      <div class="cl-sub">Be honest about the gaps — every unchecked item is an opportunity.</div>
+      <div class="cl-row gpa gpa-left" style="transition-delay:0ms"><div class="cl-chk">✓</div><div class="cl-txt"><strong>Entity + product + review schema</strong> installed and rendering in initial HTML</div></div>
+      <div class="cl-row gpa gpa-left" style="transition-delay:90ms"><div class="cl-chk">✓</div><div class="cl-txt"><strong>Key pages lead with a direct answer</strong> in the first 100 words</div></div>
+      <div class="cl-row gpa gpa-left" style="transition-delay:180ms"><div class="cl-chk">✓</div><div class="cl-txt"><strong>Business name appears on at least 3</strong> independent trusted sources outside your own website</div></div>
+      <div class="cl-row gpa gpa-left" style="transition-delay:270ms"><div class="cl-chk">✓</div><div class="cl-txt"><strong>Content reviewed and updated</strong> on a quarterly cycle</div></div>
+      <div class="cl-row gpa gpa-left" style="transition-delay:360ms"><div class="cl-chk">✓</div><div class="cl-txt"><strong>Topic clusters built</strong> around core services — not just keyword pages</div></div>
+      <div class="cl-row gpa gpa-left" style="transition-delay:450ms"><div class="cl-chk">✓</div><div class="cl-txt"><strong>Presence tested</strong> on ChatGPT + Gemini + Perplexity</div></div>
+      <div class="cl-row gpa gpa-left" style="transition-delay:540ms"><div class="cl-chk">✓</div><div class="cl-txt"><strong>UGC/reviews active</strong> and net-positive in sentiment</div></div>
+      <div class="cl-row gpa gpa-left" style="transition-delay:630ms"><div class="cl-chk">✓</div><div class="cl-txt"><strong>Consistent entity data</strong> across all directories and listings</div></div>
+    </div>
+  </div>
+
+  <div class="concl gpa">
+    <div class="concl-ttl">The Takeaway</div>
+    <p>Traditional SEO isn't dead. But ranking alone no longer drives leads the way it did. Gartner forecast a 25% drop in traditional search volume by 2026<a class="src-link" href="#s6">[6]</a> — and the data is tracking ahead of that projection in the sectors where AI has expanded fastest.</p>
+    <p>In 2026, visibility happens across Google AI Overviews, ChatGPT answers, Gemini recommendations, Claude analysis, and Perplexity research. The businesses gaining ground are those that:</p>
+    <ul class="concl-ul">
+      <li><span class="tick">✓</span> Optimize for citation, not just clicks</li>
+      <li><span class="tick">✓</span> Build brand authority through authentic external presence</li>
+      <li><span class="tick">✓</span> Show up consistently across multiple AI platforms</li>
+      <li><span class="tick">✓</span> Maintain fresh, structured, extractable content</li>
+    </ul>
+    <p>Start with one thing. Answer-first structure on your most important page. Schema markup. One podcast appearance or external mention. <strong>Pick it, do it this week, then move to the next.</strong></p>
+    <p>Your customers are already using AI to find their next service provider. Make sure AI recommends you.</p>
+    <div class="final-quote gpa"><p>"The businesses that win in the next five years won't necessarily be the ones <strong>ranking first on Google</strong>. They'll be the ones <strong>AI systems trust enough to recommend</strong>."</p></div>
+  </div>
+
+  <div class="gp-share gpa">
+    <div class="gp-share-lbl">Found this useful? Share it</div>
+    <div class="gp-share-btns">
+      <a class="gp-sh-btn gp-sh-x" rel="nofollow noopener" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Falbertabishek.blogspot.com%2F2026%2F06%2Fseo-vs-geo-why-traditional-search.html&amp;text=SEO%20vs%20GEO%3A%20Why%20Traditional%20Search%20Ranking%20Is%20Changing%20in%202026" target="_blank" title="Share on X (Twitter)">𝕏 Share on X</a>
+      <a class="gp-sh-btn gp-sh-li" rel="nofollow noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Falbertabishek.blogspot.com%2F2026%2F06%2Fseo-vs-geo-why-traditional-search.html" target="_blank" title="Share on LinkedIn">in Share on LinkedIn</a>
+      <a class="gp-sh-btn gp-sh-wa" rel="nofollow noopener" href="https://wa.me/?text=SEO%20vs%20GEO%3A%20Why%20Search%20Ranking%20Is%20Changing%20in%202026%20%E2%80%94%20https%3A%2F%2Falbertabishek.blogspot.com%2F2026%2F06%2Fseo-vs-geo-why-traditional-search.html" target="_blank" title="Share on WhatsApp">💬 WhatsApp</a>
+      <a class="gp-sh-btn gp-sh-rd" rel="nofollow noopener" href="https://www.reddit.com/submit?url=https%3A%2F%2Falbertabishek.blogspot.com%2F2026%2F06%2Fseo-vs-geo-why-traditional-search.html&amp;title=SEO%20vs%20GEO%3A%20Why%20Traditional%20Search%20Ranking%20Is%20Changing%20in%202026" target="_blank" title="Share on Reddit">🔺 Reddit</a>
+    </div>
+  </div>
+
+  <div class="sources-wrap gpa">
+    <div class="src-ttl">Sources &amp; Research</div>
+    <p class="src-intro">All statistics verified June 2026. Each figure is drawn from primary research, peer-reviewed studies, or named platform disclosures. Last updated: June 18, 2026.</p>
+    <ol class="sources-list">
+      <li id="s1"><span class="s-tag">Zero-Click</span> <a href="https://www.digitalapplied.com/blog/zero-click-search-statistics-2026-complete-data" rel="noopener nofollow" target="_blank">Digital Applied — Zero-Click Search Statistics 2026 (April 5, 2026)</a> — 64.82% of Google searches end without a click.</li>
+      <li id="s2"><span class="s-tag">Zero-Click</span> <a href="https://pasqualepillitteri.it/en/news/811/google-ai-mode-zero-click-seo-2026-en" rel="noopener nofollow" target="_blank">Pasquale Pillitteri / Semrush data (April 2026)</a> — 93% zero-click rate in Google AI Mode. 43% in standard AI Overviews. Source data: Semrush, September 2025.</li>
+      <li id="s3"><span class="s-tag">AI Overviews</span> <a href="https://www.searchenginejournal.com/ai-overviews-cut-organic-clicks-38-field-study-finds/573145/" rel="noopener nofollow" target="_blank">Search Engine Journal — AI Overviews Cut Organic Clicks 38%, Field Study (April 29, 2026)</a> — AEA pre-registered randomized experiment, Jan–Feb 2026. 38% CTR reduction; zero-click rate rose from 54% to 72%.</li>
+      <li id="s4"><span class="s-tag">AI Overviews</span> <a href="https://www.omnibound.ai/blog/zero-click-search-statistics" rel="noopener nofollow" target="_blank">Omnibound — Zero-Click Search Statistics 2026 (citing Seer Interactive, November 2025)</a> — 61% organic CTR drop when AI Overview appears. Brands cited inside AI Overviews earn +35% more organic clicks vs. non-cited brands.</li>
+      <li id="s5"><span class="s-tag">AI Overviews</span> <a href="https://pasqualepillitteri.it/en/news/811/google-ai-mode-zero-click-seo-2026-en" rel="noopener nofollow" target="_blank">Pasquale Pillitteri (citing Ahrefs, November 2025)</a> — 99.9% of informational keywords trigger an AI Overview. 25% of all Google searches display an AI Overview (Conductor, November 2025).</li>
+      <li id="s6"><span class="s-tag">Market Forecast</span> <a href="https://www.omnibound.ai/blog/zero-click-search-statistics" rel="noopener nofollow" target="_blank">Omnibound (citing Gartner, February 2024)</a> — Gartner forecast: traditional search engine volume to drop 25% by 2026 as AI chatbots absorb query share.</li>
+      <li id="s7"><span class="s-tag">Traffic Impact</span> <a href="https://thedigitalbloom.com/learn/2025-organic-traffic-crisis-analysis-report/" rel="noopener nofollow" target="_blank">The Digital Bloom — 2025 Organic Traffic Crisis Analysis</a> — AI Overview growth: 258% in real estate, 273% in restaurants, 206% in retail (Jan–Mar 2025). Some sectors recorded 40–70% organic traffic losses in a single year.</li>
+      <li id="s8"><span class="s-tag">GEO Research</span> <a href="https://www.omnibound.ai/blog/generative-engine-optimization-statistics" rel="noopener nofollow" target="_blank">Omnibound — GEO Statistics 2026 (citing Ahrefs, 75,000-brand study, August 2025)</a> — Brand mentions correlate 3× more strongly with AI visibility than backlinks (0.664 vs. 0.218 correlation coefficient).</li>
+      <li id="s9"><span class="s-tag">GEO Research</span> <a href="https://ziptie.dev/blog/how-original-research-wins-ai-citations/" rel="noopener nofollow" target="_blank">ZipTie.dev (citing Princeton / Georgia Tech / IIT Delhi / Allen Institute for AI, KDD 2024)</a> — First peer-reviewed GEO framework. Statistics addition: +41% AI visibility. Authoritative source citations and quotation addition also among top techniques.</li>
+      <li id="s10"><span class="s-tag">Citations</span> <a href="https://www.mersel.ai/blog/why-organic-traffic-declining-2026" rel="noopener nofollow" target="_blank">Mersel AI — Why Is Organic Traffic Declining in 2026? (March 18, 2026, citing BrightEdge, February 2026)</a> — 89% of AI citations now come from beyond the top-100 organic listings.</li>
+      <li id="s11"><span class="s-tag">Citations</span> <a href="https://www.mersel.ai/blog/why-organic-traffic-declining-2026" rel="noopener nofollow" target="_blank">Mersel AI (citing BrightEdge, early 2026)</a> — Top-10 Google ranking to AI Overview citation overlap: 75% in mid-2025, collapsed to 17–38% by early 2026.</li>
+      <li id="s12"><span class="s-tag">GEO Strategy</span> <a href="https://www.omnibound.ai/blog/generative-engine-optimization-statistics" rel="noopener nofollow" target="_blank">Omnibound — GEO Statistics 2026</a> — Distributing content to a wide range of publications increases AI citations by up to 325% vs. publishing only on your own site.</li>
+      <li id="s13"><span class="s-tag">AI Traffic</span> <a href="https://www.mersel.ai/generative-engine-optimization" rel="noopener nofollow" target="_blank">Mersel AI — GEO Guide (citing Semrush, June 2025)</a> — AI-referred traffic converts at 4.4× the rate of standard organic search. AI platform referral visits grew 357% YoY to 1.13 billion in June 2025.</li>
+      <li id="s14"><span class="s-tag">Platform Scale</span> <a href="https://www.demandsage.com/chatgpt-statistics/" rel="noopener nofollow" target="_blank">DemandSage — ChatGPT Statistics (June 2026, citing OpenAI, February 2026)</a> — ChatGPT surpassed 900 million weekly active users as of February 2026; 1 billion monthly active users milestone reached June 2026.</li>
+      <li id="s15"><span class="s-tag">Consumer Behavior</span> <a href="https://www.instantpress.co/ai-statistics" rel="noopener nofollow" target="_blank">InstantPress — AI &amp; ChatGPT Statistics 2026 (May 25, 2026)</a> — 37% of consumers now begin their searches with AI tools rather than a traditional search engine.</li>
+      <li id="s16"><span class="s-tag">AI Traffic</span> <a href="https://www.ekamoira.com/blog/zero-click-search-2026-seo" rel="noopener nofollow" target="_blank">Ekamoira (citing AllAboutAI, 2025)</a> — Traffic from AI platforms increased 527% year-over-year.</li>
+      <li id="s17"><span class="s-tag">Consumer Behavior</span> <a href="https://www.omnibound.ai/blog/zero-click-search-statistics" rel="noopener nofollow" target="_blank">Omnibound (citing Bain &amp; Company, February 2025)</a> — 80% of consumers now rely on AI-generated results for at least 40% of their searches. Organic web traffic has declined an estimated 15–25% as a direct result.</li>
+    </ol>
+  </div>
+
+  <div class="gp-foot">Got questions? Drop them in the comments — I reply to as many as I can.</div>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var bar = document.getElementById('gp-pgbar');
+  var btn = document.getElementById('gp-top');
+  function onScroll() {
+    if (bar) { var h = document.documentElement.scrollHeight - window.innerHeight; bar.style.width = (h > 0 ? (window.scrollY / h * 100) : 0) + '%'; }
+    if (btn) { if (window.scrollY > 500) { btn.classList.add('gp-vis'); } else { btn.classList.remove('gp-vis'); } }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  if (btn) { btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); }); }
+  if (!('IntersectionObserver' in window)) {
+    var all = document.querySelectorAll('.gpa');
+    for (var i = 0; i < all.length; i++) { all[i].classList.add('gpa-go'); }
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    for (var i = 0; i < entries.length; i++) { if (entries[i].isIntersecting) { entries[i].target.classList.add('gpa-go'); io.unobserve(entries[i].target); } }
+  }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+  var gpas = document.querySelectorAll('.gpa');
+  for (var j = 0; j < gpas.length; j++) { io.observe(gpas[j]); }
+  var scParents = document.querySelectorAll('.gpa-stagger-sc');
+  for (var k = 0; k < scParents.length; k++) {
+    var kids = scParents[k].children;
+    for (var m = 0; m < kids.length; m++) { kids[m].classList.add('gpa', 'gpa-scale'); kids[m].style.transitionDelay = (m * 100) + 'ms'; io.observe(kids[m]); }
+  }
+  var fuParents = document.querySelectorAll('.gpa-stagger');
+  for (var n = 0; n < fuParents.length; n++) {
+    var fkids = fuParents[n].children;
+    for (var p = 0; p < fkids.length; p++) { fkids[p].classList.add('gpa'); fkids[p].style.transitionDelay = (p * 110) + 'ms'; io.observe(fkids[p]); }
+  }
+  var cio = new IntersectionObserver(function (entries) {
+    for (var i = 0; i < entries.length; i++) {
+      var e = entries[i];
+      if (!e.isIntersecting || e.target._gpDone) continue;
+      e.target._gpDone = true;
+      cio.unobserve(e.target);
+      (function (el) {
+        var raw = el.dataset.gpRaw;
+        var m = raw.match(/^([+\-]?)(\d+(?:\.\d+)?)(.*)$/);
+        if (!m) { el.textContent = raw; return; }
+        var pfx = m[1], tgt = parseFloat(m[2]), sfx = m[3];
+        var dec = m[2].indexOf('.') > -1 ? m[2].split('.')[1].length : 0;
+        var t0 = null;
+        requestAnimationFrame(function tick(ts) {
+          if (!t0) t0 = ts;
+          var prog = Math.min((ts - t0) / 1500, 1);
+          var val  = tgt * (1 - Math.pow(1 - prog, 3));
+          el.textContent = pfx + val.toFixed(dec) + sfx;
+          if (prog < 1) requestAnimationFrame(tick);
+        });
+      })(e.target);
+    }
+  }, { threshold: 0.5 });
+  var statNums = document.querySelectorAll('.stat-num');
+  for (var q = 0; q < statNums.length; q++) {
+    var raw = statNums[q].textContent.trim();
+    if (/\u2013/.test(raw)) continue;
+    var mt = raw.match(/^([+\-]?)(\d+(?:\.\d+)?)(.*)$/);
+    if (!mt) continue;
+    statNums[q].dataset.gpRaw = raw;
+    cio.observe(statNums[q]);
+  }
+})();
+</script>
+</body>
+</html>
